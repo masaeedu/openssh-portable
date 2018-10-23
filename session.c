@@ -624,7 +624,7 @@ int do_exec_windows(struct ssh *ssh, Session *s, const char *command, int pty) {
 		pty = 0;
 	}
 
-	exec_command = build_session_commandline(s->pw->pw_shell, shell_command_option, command);
+	exec_command = command;
 	if (exec_command == NULL)
 		goto cleanup;
 
